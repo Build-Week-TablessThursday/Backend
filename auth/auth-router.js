@@ -13,6 +13,7 @@ router.post('/register', verifyUser,(req,res) => {
     res.send({id,token})
   })
   .catch(err => {
+    console.log(err)
     res.status(500).json({error: "Could not create user!"})
   })
 })
