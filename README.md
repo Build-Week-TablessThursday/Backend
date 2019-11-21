@@ -1,4 +1,5 @@
 # Backend
+
 For BACKEND devs
 
 ## Register a user
@@ -87,12 +88,17 @@ This allows a user to update tab information. Changes are allowed to `url`, `nam
     "user_id": 1,
     "category_id": 1,
     "category": "School"
-} 
+}
 
-## Delete a tab 
+
+## Delete a tab
+
 
 `Delete`
 https://tablessthursday.herokuapp.com/api/tabs/id:/id:tab_id
 
+
 This allows a user to delete a tab. It's just a simple delete request .
+
+
 
