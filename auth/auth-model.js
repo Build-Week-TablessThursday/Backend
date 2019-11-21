@@ -11,4 +11,4 @@ function insert(user){
 
 function get(filter){
   return db('users').where(filter)
-}
+};
