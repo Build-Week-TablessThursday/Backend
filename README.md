@@ -57,14 +57,14 @@ https://tablessthursday.herokuapp.com/api/:id
 
 You'll want to format it like this...
 
-```
+
 {
     "name": "post",
     "url": "http://google.com",
     "notes": "the crazy pos",
     "category_id": 2
 }
-```
+
 Categories are :
 1 - School
 2 - Work
