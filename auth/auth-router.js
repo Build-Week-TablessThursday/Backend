@@ -13,6 +13,7 @@ router.post('/register', verifyUser,(req,res) => {
     res.send({id,token})
   })
   .catch(err => {
+    console.log(err)
     res.status(500).json({error: "Could not create user!"})
   })
 })
@@ -32,6 +33,18 @@ router.post('/login', verifyUser, (req,res) => {
   .catch(err => {
     res.status(500).json({error: "error verifying the user"})
   })
+})
+
+router.get('/logout', (req,res) => {
+  if(token){
+    token.destroy(error => {
+      if(error){
+        res.status(500).json({message: "no can do"})
+      }else{
+        res.status(200),json({message: "logged"})
+      }
+    })
+  }
 })
 
 

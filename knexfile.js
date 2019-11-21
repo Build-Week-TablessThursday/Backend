@@ -1,5 +1,4 @@
 // Update with your config settings.
-
 module.exports = {
 
   development: {
@@ -40,15 +39,27 @@ module.exports = {
   },
 
   production: {
-    client: 'postgres',
+    client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: './database/migrations'
     },
     seeds: {
       directory: './database/seeds'
-    }
-  }
+    },
+    pool: {
+          min: 2,
+          max: 10
+    },
+    seeds: {
+          directory: './database/seeds'
+        },
+        afterCreate: (conn, done) => {
+          conn.run('PRAGMA foreign_keys = ON', done);
+        },
+}
+        
+  
 
   // production: {
   //   client: 'postgresql',
