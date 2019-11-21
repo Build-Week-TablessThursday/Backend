@@ -1,4 +1,5 @@
 # Backend
+
 For BACKEND devs
 
 ## Register a user
@@ -57,21 +58,22 @@ https://tablessthursday.herokuapp.com/api/:id
 
 You'll want to format it like this...
 
-
+```
 {
     "name": "post",
     "url": "http://google.com",
     "notes": "the crazy pos",
     "category_id": 2
 }
-
+```
+```
 Categories are :
 1 - School
 2 - Work
 3 - Programming
 4 - Music
 5 - Cars
-
+```
 
 ## Update a users tab
 
@@ -79,7 +81,7 @@ Categories are :
 https://tablessthursday.herokuapp.com/api/tabs/:id/:tab_id
 
 This allows a user to update tab information. Changes are allowed to `url`, `name`, `notes`, and you can change the `category_id` using the numbers above, using this format:
-
+```
 {
     "url": "http://www.youtube.com",
     "name": "YouTube",
@@ -88,11 +90,11 @@ This allows a user to update tab information. Changes are allowed to `url`, `nam
     "category_id": 1,
     "category": "School"
 } 
-
-## Delete a tab 
+```
+## Delete a tab
 
 `Delete`
 https://tablessthursday.herokuapp.com/api/tabs/id:/id:tab_id
 
-This allows a user to delete a tab. It's just a simple delete request .
+This allows a user to delete a tab. It's just a simple delete request.
 
