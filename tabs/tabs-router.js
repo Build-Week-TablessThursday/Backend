@@ -11,7 +11,7 @@ router.get('/categories', (req,res) => {
     .catch(err => {
       res.status(500).json({error: "error occured while getting category list"})
     })
-})
+});
 
 router.use('/:id', confirmUser)
 
