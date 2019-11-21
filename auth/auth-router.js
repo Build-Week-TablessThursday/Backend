@@ -35,6 +35,18 @@ router.post('/login', verifyUser, (req,res) => {
   })
 })
 
+router.get('/logout', (req,res) => {
+  if(token){
+    token.destroy(error => {
+      if(error){
+        res.status(500).json({message: "no can do"})
+      }else{
+        res.status(200),json({message: "logged"})
+      }
+    })
+  }
+})
+
 
 
 function verifyUser(req,res,next) {
