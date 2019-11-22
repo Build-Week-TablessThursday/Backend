@@ -52,7 +52,7 @@ exports.up = function(knex) {
     .references('id')
     .inTable('categories')
     .onDelete('CASCADE')
-    .defaultsTo("uncategorized")
+    .defaultsTo(1)
     .notNullable()
   })
 };
