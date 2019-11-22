@@ -54,7 +54,7 @@ It should just be a basic get request
 ## Create new tab
 
 `Post`
-https://tablessthursday.herokuapp.com/api/:id
+https://tablessthursday.herokuapp.com/api/tabs/:id
 
 You'll want to format it like this...
 
